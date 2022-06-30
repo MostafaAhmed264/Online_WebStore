@@ -215,6 +215,224 @@ public class mainpageController {
         q5.setValueFactory(valueFactory5);
 
     }
+    client fadiola
+    mainpage tawfik aymona
+    ClientConnection tfatef
+    CartController abbas
+
+
+
+
+
+    @FXML
+    public void nextPagebutton(ActionEvent event) throws IOException {
+        for (int i =0;i<itemLabels.size();i++){
+            itemLabels.get(i).setVisible(false);
+            priceLabels.get(i).setVisible(false);
+            spinners.get(i).setVisible(false);
+        }
+        pageNumber++;
+        if (pageFlags.get(pageNumber))
+        {
+            dbIndx += 5;
+        }
+        initialize();
+    }
+
+    @FXML
+    public void prevPageButton(ActionEvent event) throws IOException
+    {
+        for (int i =0;i<itemLabels.size();i++)
+        {
+            itemLabels.get(i).setVisible(false);
+            priceLabels.get(i).setVisible(false);
+            spinners.get(i).setVisible(false);
+        }
+        pageNumber--;
+        initialize();
+    }
+    @FXML
+    public void MyProfilebutton(ActionEvent event) throws IOException {
+        flag = true;
+        search = true;
+        searchString = searchBox.getText();
+        searchBox.clear();
+        items.clear();
+        pageFlags.clear();
+        sadPig.setVisible(false);
+        notFound.setVisible(false);
+        dbIndx = 0;
+        for (int i =0;i<itemLabels.size();i++)
+        {
+            itemLabels.get(i).setVisible(false);
+            priceLabels.get(i).setVisible(false);
+            spinners.get(i).setVisible(false);
+        }
+        pageNumber=0;
+        Parent root = FXMLLoader.load(getClass().getResource("MyProfile.fxml"));
+        Stage stage = (Stage) menuButton.getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void  addToCart(ActionEvent event) throws IOException {
+        if(q1.getValue() != 0){
+            c.getCart().addItem(items.get(pageNumber).get(0),q1.getValue());
+        }
+
+        if(q2.getValue() != 0){
+            c.getCart().addItem(items.get(pageNumber).get(1),q2.getValue());
+        }
+
+        if(q3.getValue() != 0){
+            c.getCart().addItem(items.get(pageNumber).get(2),q3.getValue());
+        }
+
+        if(q4.getValue() != 0){
+            c.getCart().addItem(items.get(pageNumber).get(3),q4.getValue());
+        }
+
+        if(q5.getValue() != 0){
+            c.getCart().addItem(items.get(pageNumber).get(4),q5.getValue());
+        }
+        c.getCart().printItems();
+        c.getCart().printQuantity();
+
+        Cartbutton(event);
+    }
+    @FXML
+    public void Cartbutton(ActionEvent event) throws IOException {
+        flag = true;
+        search = true;
+        searchString = searchBox.getText();
+        searchBox.clear();
+        items.clear();
+        pageFlags.clear();
+        sadPig.setVisible(false);
+        notFound.setVisible(false);
+        dbIndx = 0;
+        for (int i =0;i<itemLabels.size();i++)
+        {
+            itemLabels.get(i).setVisible(false);
+            priceLabels.get(i).setVisible(false);
+            spinners.get(i).setVisible(false);
+        }
+        pageNumber=0;
+        Parent root = FXMLLoader.load(getClass().getResource("Cart.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    public void Transactionsbutton(ActionEvent event) throws IOException {
+        flag = true;
+        search = true;
+        searchString = searchBox.getText();
+        searchBox.clear();
+        items.clear();
+        pageFlags.clear();
+        sadPig.setVisible(false);
+        notFound.setVisible(false);
+        dbIndx = 0;
+        for (int i =0;i<itemLabels.size();i++)
+        {
+            itemLabels.get(i).setVisible(false);
+            priceLabels.get(i).setVisible(false);
+            spinners.get(i).setVisible(false);
+        }
+        pageNumber=0;
+        String clientData = clientConnection.sendRecieve(clientConnection.constructQueryBuy(c.getEmail()));
+        System.out.println(clientData);
+        System.out.println(clientData.length());
+        c.ParseTransactions(clientData);
+        //c.tempFunction();
+        for(int i=0;i<c.Trans.Transactions.size();i++){
+            System.out.println(c.Trans.Transactions.get(i).getItemName());
+            System.out.println(c.Trans.Transactions.get(i).getDate());
+            System.out.println(c.Trans.Transactions.get(i).getPrice());
+            System.out.println(c.Trans.Transactions.get(i).getQuantity());
+        }
+        Parent root = FXMLLoader.load(getClass().getResource("Transactions.fxml"));
+        Stage stage = (Stage) menuButton.getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    public void addToYourBalancebutton(ActionEvent event) throws IOException {
+        flag = true;
+        search = true;
+        searchString = searchBox.getText();
+        searchBox.clear();
+        items.clear();
+        pageFlags.clear();
+        sadPig.setVisible(false);
+        notFound.setVisible(false);
+        dbIndx = 0;
+        for (int i =0;i<itemLabels.size();i++)
+        {
+            itemLabels.get(i).setVisible(false);
+            priceLabels.get(i).setVisible(false);
+            spinners.get(i).setVisible(false);
+        }
+        pageNumber=0;
+        Parent root = FXMLLoader.load(getClass().getResource("Cash.fxml"));
+        Stage stage = (Stage) menuButton.getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    public void logoutbutton(ActionEvent event) throws IOException {
+        flag = true;
+        search = true;
+        searchString = searchBox.getText();
+        searchBox.clear();
+        items.clear();
+        pageFlags.clear();
+        sadPig.setVisible(false);
+        notFound.setVisible(false);
+        dbIndx = 0;
+        for (int i =0;i<itemLabels.size();i++)
+        {
+            itemLabels.get(i).setVisible(false);
+            priceLabels.get(i).setVisible(false);
+            spinners.get(i).setVisible(false);
+        }
+        pageNumber=0;
+        c=null;
+        c=new Client();
+        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        Stage stage = (Stage) menuButton.getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    public void searchItem(ActionEvent event) throws IOException {
+        flag = true;
+        search = true;
+        searchString = searchBox.getText();
+        searchBox.clear();
+        items.clear();
+        pageFlags.clear();
+        sadPig.setVisible(false);
+        notFound.setVisible(false);
+        dbIndx = 0;
+        for (int i =0;i<itemLabels.size();i++)
+        {
+            itemLabels.get(i).setVisible(false);
+            priceLabels.get(i).setVisible(false);
+            spinners.get(i).setVisible(false);
+        }
+        pageNumber=0;
+        initialize();
+    }
 
 
 
