@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="641.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clientgui.mainpageController">
+   <children>
+      <Label layoutX="619.0" layoutY="12.0" prefHeight="26.0" prefWidth="85.0" text=" Balance">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="nextBtn" layoutX="662.0" layoutY="579.0" mnemonicParsing="false" onAction="#nextPagebutton" prefHeight="34.0" prefWidth="95.0" text="Next Page" />
+      <Label layoutX="225.0" layoutY="48.0" prefHeight="34.0" prefWidth="146.0" text="Item's Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchBox" layoutX="171.0" layoutY="83.0" prefHeight="26.0" prefWidth="219.0" />
+      <Button layoutX="437.0" layoutY="83.0" mnemonicParsing="false" onAction="#searchItem" prefHeight="26.0" prefWidth="86.0" text="Search" />
+      <Label fx:id="item1" layoutX="64.0" layoutY="156.0" prefHeight="34.0" prefWidth="186.0" text="Label1">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="price1" layoutX="322.0" layoutY="156.0" prefHeight="34.0" prefWidth="117.0" text="Label">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="item2" layoutX="64.0" layoutY="244.0" prefHeight="34.0" prefWidth="186.0" text="Label">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="price2" layoutX="322.0" layoutY="243.0" prefHeight="34.0" prefWidth="118.0" text="Label">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="item3" layoutX="64.0" layoutY="335.0" prefHeight="34.0" prefWidth="186.0" text="Label">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="price3" layoutX="322.0" layoutY="322.0" prefHeight="34.0" prefWidth="118.0" text="Label">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="item4" layoutX="64.0" layoutY="416.0" prefHeight="34.0" prefWidth="186.0" text="Label">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="price4" layoutX="322.0" layoutY="415.0" prefHeight="34.0" prefWidth="118.0" text="Label">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="item5" layoutX="64.0" layoutY="499.0" prefHeight="34.0" prefWidth="186.0" text="Label">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="price5" layoutX="322.0" layoutY="499.0" prefHeight="34.0" prefWidth="118.0" text="Label">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="q1" layoutX="604.0" layoutY="160.0" prefHeight="17.0" prefWidth="58.0" />
+      <Spinner fx:id="q2" layoutX="604.0" layoutY="248.0" prefHeight="17.0" prefWidth="58.0" />
+      <Spinner fx:id="q3" layoutX="604.0" layoutY="339.0" prefHeight="17.0" prefWidth="58.0" />
+      <Spinner fx:id="q4" layoutX="604.0" layoutY="420.0" prefHeight="17.0" prefWidth="58.0" />
+      <Spinner fx:id="q5" layoutX="604.0" layoutY="503.0" prefHeight="17.0" prefWidth="58.0" />
+      <Button layoutX="355.0" layoutY="583.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="34.0" prefWidth="86.0" text="Add to Cart" />
+      <Label fx:id="balanceLabel" layoutX="718.0" layoutY="16.0" text="Label">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <MenuButton fx:id="menuButton" layoutX="15.0" layoutY="13.0" mnemonicParsing="false" text="Menu">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#MyProfilebutton" text="Profile" />
+            <MenuItem mnemonicParsing="false" onAction="#Transactionsbutton" text="Order history" />
+            <MenuItem mnemonicParsing="false" onAction="#addToYourBalancebutton" text="add to your balance" />
+            <MenuItem mnemonicParsing="false" onAction="#logoutbutton" text="log out" />
+         </items>
+      </MenuButton>
+      <Button fx:id="prevBtn" layoutX="47.0" layoutY="583.0" mnemonicParsing="false" onAction="#prevPageButton" prefHeight="34.0" prefWidth="86.0" text="PrevPage" />
+      <ImageView fx:id="sadPig" fitHeight="150.0" fitWidth="200.0" layoutX="271.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+      <Label fx:id="notFound" layoutX="245.0" layoutY="190.0" prefHeight="46.0" prefWidth="270.0" text="Item Not Found!!!!" visible="false">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
