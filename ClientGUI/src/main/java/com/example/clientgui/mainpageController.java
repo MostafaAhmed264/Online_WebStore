@@ -20,6 +20,7 @@ import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.sql.*;
 
 
 import static com.example.clientgui.HelloApplication.clientConnection;
