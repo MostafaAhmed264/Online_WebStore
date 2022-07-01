@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clientgui.MyProfileController">
+   <children>
+      <Label layoutX="95.0" layoutY="44.0" prefHeight="30.0" prefWidth="118.0" text="My Profile">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="444.0" layoutY="342.0" mnemonicParsing="false" onAction="#returnbutton" prefHeight="26.0" prefWidth="128.0" text="return to main page" />
+      <Label fx:id="fname" layoutX="97.0" layoutY="97.0" prefHeight="18.0" prefWidth="79.0" text="Label" />
+      <Label fx:id="fnamevalue" layoutX="204.0" layoutY="93.0" prefHeight="18.0" prefWidth="94.0" text="Label" />
+      <Label fx:id="lname" layoutX="97.0" layoutY="124.0" prefHeight="18.0" prefWidth="79.0" text="Label" />
+      <Label fx:id="email" layoutX="97.0" layoutY="150.0" prefHeight="18.0" prefWidth="79.0" text="Label" />
+      <Label fx:id="password" layoutX="97.0" layoutY="177.0" prefHeight="18.0" prefWidth="79.0" text="Label" />
+      <Label fx:id="phone" layoutX="97.0" layoutY="208.0" prefHeight="18.0" prefWidth="79.0" text="Label" />
+      <Label fx:id="lnamevalue" layoutX="204.0" layoutY="124.0" prefHeight="18.0" prefWidth="94.0" text="Label" />
+      <Label fx:id="emailvalue" layoutX="204.0" layoutY="150.0" prefHeight="18.0" prefWidth="124.0" text="Label" />
+      <Label fx:id="passwordvalue" layoutX="204.0" layoutY="177.0" prefHeight="18.0" prefWidth="94.0" text="Label" />
+      <Label fx:id="phonevalue" layoutX="204.0" layoutY="208.0" prefHeight="18.0" prefWidth="94.0" text="Label" />
+      <Label fx:id="addressvalue" layoutX="204.0" layoutY="236.0" prefHeight="18.0" prefWidth="94.0" text="Label" />
+      <Label fx:id="balancevalue" layoutX="204.0" layoutY="266.0" prefHeight="18.0" prefWidth="94.0" text="Label" />
+      <Label fx:id="address" layoutX="97.0" layoutY="236.0" prefHeight="18.0" prefWidth="79.0" text="Label" />
+      <Label fx:id="balance" layoutX="97.0" layoutY="266.0" prefHeight="18.0" prefWidth="79.0" text="Label" />
+   </children>
+</AnchorPane>
