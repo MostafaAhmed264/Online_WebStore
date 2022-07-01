@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clientgui.CartController">
+    <children>
+        <AnchorPane layoutX="-157.0" layoutY="20.0" prefHeight="538.0" prefWidth="742.0">
+            <children>
+                <TableView fx:id="cartTable" layoutX="253.0" layoutY="75.0" prefHeight="338.0" prefWidth="406.0">
+                    <columns>
+                        <TableColumn fx:id="ItemNameColumn" prefWidth="114.4000244140625" text="Item Name" />
+                        <TableColumn fx:id="PriceColumn" prefWidth="131.99993896484375" text="Price" />
+                  <TableColumn fx:id="QuantityColumn" prefWidth="158.39999999999998" text="Quantity" />
+                    </columns>
+                </TableView>
+                <Button layoutX="547.0" layoutY="459.0" mnemonicParsing="false" onAction="#purchasebutton" prefHeight="42.0" prefWidth="111.0" text="purchase" />
+                <Label layoutX="405.0" layoutY="14.0" prefHeight="40.0" prefWidth="99.0" text="My cart">
+                    <font>
+                        <Font size="28.0" />
+                    </font>
+                </Label>
+                <Button layoutX="174.0" layoutY="-6.0" mnemonicParsing="false" onAction="#returnbutton" prefHeight="40.0" prefWidth="78.0" text="Back" />
+            <Label fx:id="totalPrice" layoutX="559.0" layoutY="418.0" prefHeight="40.0" prefWidth="87.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="252.0" layoutY="480.0" mnemonicParsing="false" onAction="#editItem" prefHeight="31.0" prefWidth="87.0" text="Edit Item" />
+            <Button layoutX="256.0" layoutY="438.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="31.0" prefWidth="87.0" text="Remove Item" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
