@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane fx:id="SystemStatusbutton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.servergui.HelloController">
+   <children>
+      <Label layoutX="225.0" layoutY="51.0" text="Admin Panel">
+         <font>
+            <Font size="27.0" />
+         </font></Label>
+      <Button layoutX="107.0" layoutY="217.0" mnemonicParsing="false" onAction="#SystemStatusbutton" text="System Status" />
+      <Label layoutX="70.0" layoutY="180.0" prefHeight="36.0" prefWidth="177.0" text="number of users:">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="numberofuserslabel" layoutX="330.0" layoutY="180.0" prefHeight="32.0" prefWidth="194.0" text="number of users:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="150.0" layoutY="57.0" mnemonicParsing="false" onAction="#refreshbutton" text="refresh" />
+
+      <Button layoutX="358.0" layoutY="217.0" mnemonicParsing="false" onAction="#ClientStatusbutton" text="Client Transactions Status" />
+      <Label layoutX="70.0" layoutY="125.0" prefHeight="36.0" prefWidth="250.0" text="number of Connected users:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberofuserslabel1" layoutX="330.0" layoutY="125.0" prefHeight="32.0" prefWidth="194.0" text="number of users:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

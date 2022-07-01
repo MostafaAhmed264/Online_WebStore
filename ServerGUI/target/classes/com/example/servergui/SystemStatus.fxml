@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.servergui.SystemStatusController">
+   <children>
+      <TableView fx:id="ItemsTable" layoutX="100.0" layoutY="49.0" prefHeight="249.0" prefWidth="408.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="Item ID" />
+          <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Item Name" />
+            <TableColumn fx:id="priceColumn" prefWidth="73.0" text="Price" />
+            <TableColumn fx:id="quantityColumn" prefWidth="102.0" text="remaining Items" />
+            <TableColumn fx:id="categoryColumn" prefWidth="81.0" text="Category" />
+        </columns>
+      </TableView>
+      <Label layoutX="100.0" layoutY="314.0" prefHeight="43.0" prefWidth="155.0" text="Total Profit:">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="ProfitLabel" layoutX="288.0" layoutY="314.0" prefHeight="43.0" prefWidth="155.0" text="Total Profit">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Button layoutX="524.0" layoutY="357.0" mnemonicParsing="false" onAction="#backButton" text="back" />
+      <Label layoutX="100.0" layoutY="7.0" prefHeight="35.0" prefWidth="183.0" text="Available Stock">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
